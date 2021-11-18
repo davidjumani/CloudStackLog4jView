@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Log4jView Theme</string>
+	<string>CloudStackLog4jView Theme</string>
 	<key>settings</key>
 	<array>
 		<dict>

@@ -7,7 +7,7 @@
 		<string>log</string>
 	</array>
 	<key>name</key>
-	<string>Log4jView</string>
+	<string>CloudStackLog4jView</string>
 	<key>patterns</key>
 	<array>
 		<dict>
@@ -37,23 +37,18 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>control.log4jview</string>
+					<string>entity.error.log4jview</string>
 				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.error.log4jview</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>control.log4jview</string>
+					<string>entity.error.message.log4jview</string>
 				</dict>
 			</dict>
 			<key>comment</key>
 			<string>exception jboss</string>
 			<key>match</key>
-			<string>^([a-zA-Z\s]*)(.*Exception\:)(\s*.*)$</string>
+			<string>^(.*Exception\:)(\s*.*)$</string>
 			<key>name</key>
 			<string>string.quoted.log4jview</string>
 		</dict>
@@ -68,12 +63,12 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.warn.log4jview</string>
+					<string>entity.error.message.log4jview</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>entity.warn.message.log4jview</string>
+					<string>entity.error.log4jview</string>
 				</dict>
 				<key>4</key>
 				<dict>
@@ -104,173 +99,266 @@
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>entity.warn.log4jview</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
 					<string>entity.warn.message.log4jview</string>
 				</dict>
-			</dict>
-			<key>comment</key>
-			<string>warn jboss</string>
-			<key>match</key>
-			<string>^(.*)(WARN)\s*(\[.*\])\s*(.*)$</string>
-			<key>name</key>
-			<string>string.quoted.log4jview</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>control.log4jview</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.info.log4jview</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>entity.info.log4jview</string>
-				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>entity.info.message.log4jview</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>info jboss</string>
-			<key>match</key>
-			<string>^(.*)(INFO)\s*(\[.*\])\s*(.*)$</string>
-			<key>name</key>
-			<string>string.quoted.log4jview</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>control.log4jview</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.error.log4jview</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>entity.error.log4jview</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>entity.error.message.log4jview</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>error jboss</string>
-			<key>match</key>
-			<string>^(.*)(ERROR)\s*(\[.*\])\s*(.*)$</string>
-			<key>name</key>
-			<string>string.quoted.log4jview</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>control.log4jview</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.debug.log4jview</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>entity.debug.log4jview</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>entity.debug.message.log4jview</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>debug jboss</string>
-			<key>match</key>
-			<string>^(.*)(DEBUG)\s*(\[.*\])\s*(.*)$</string>
-			<key>name</key>
-			<string>string.quoted.log4jview</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>control.log4jview</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.trace.log4jview</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>entity.trace.log4jview</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>entity.trace.message.log4jview</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>trace jboss</string>
-			<key>match</key>
-			<string>^(.*)(TRACE)\s*(\[.*\])\s*(.*)$</string>
-			<key>name</key>
-			<string>string.quoted.log4jview</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>control.log4jview</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.fatal.log4jview</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>entity.fatal.log4jview</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>entity.fatal.message.log4jview</string>
+					<string>entity.warn.log4jview</string>
 				</dict>
 			</dict>
 			<key>comment</key>
 			<string>fatal jboss</string>
 			<key>match</key>
-			<string>^(.*)(FATAL)\s*(\[.*\])\s*(.*)$</string>
+			<string>^(.*\d)\s([A-Z]*)\s*(\[.*?\]\s*\(.*?\)\s*\(.*?\))\s*(.*(?i)fail.*)$</string>
+			<key>name</key>
+			<string>string.quoted.log4jview</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>control.log4jview</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.warn.log4jview</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.warn.message.log4jview</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>entity.warn.log4jview</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>warn jboss</string>
+			<key>match</key>
+			<string>^(.*)(WARN)\s*(\[.*?\]\s*\(.*?\)\s*\(.*?\))\s*(.*)$</string>
+			<key>name</key>
+			<string>string.quoted.log4jview</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>control.log4jview</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.info.log4jview</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.info.message.log4jview</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>entity.info.log4jview</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>info jboss</string>
+			<key>match</key>
+			<string>^(.*)(INFO)\s*(\[.*?\]\s*\(.*?\)\s*\(.*?\))\s*(.*)$</string>
+			<key>name</key>
+			<string>string.quoted.log4jview</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>control.log4jview</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.error.log4jview</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.error.message.log4jview</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>entity.error.log4jview</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>error jboss</string>
+			<key>match</key>
+			<string>^(.*)(ERROR)\s*(\[.*?\]\s*\(.*?\)\s*\(.*?\))\s*(.*)$</string>
+			<key>name</key>
+			<string>string.quoted.log4jview</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>control.log4jview</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.fatal.log4jview</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.fatal.message.log4jview</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>entity.fatal.log4jview</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>fatal jboss</string>
+			<key>match</key>
+			<string>^(.*\d) ([A-Z]*)\s*(\[.*?\]\s*\(.*?\)\s*\(.*?\))\s*(===.*?===.*)$</string>
+			<key>name</key>
+			<string>string.quoted.log4jview</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>control.log4jview</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.fatal.log4jview</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.fatal.message.log4jview</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>entity.fatal.log4jview</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>fatal jboss</string>
+			<key>match</key>
+			<string>^(.*\d)\s([A-Z]*)\s*(\[.*?\]\s*\(.*?\)\s*\(.*?\))\s*(.*\sSending.*\{.*Cmd.*)$</string>
+			<key>name</key>
+			<string>string.quoted.log4jview</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>control.log4jview</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.fatal.log4jview</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.fatal.message.log4jview</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>entity.fatal.log4jview</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>fatal jboss</string>
+			<key>match</key>
+			<string>^(.*\d)\s([A-Z]*)\s*(\[.*?\]\s*\(.*?\)\s*\(.*?\))\s*(.*\sProcessing.*{.*Ans.*)$</string>
+			<key>name</key>
+			<string>string.quoted.log4jview</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>control.log4jview</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.debug.log4jview</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.debug.message.log4jview</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>entity.debug.log4jview</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>debug jboss</string>
+			<key>match</key>
+			<string>^(.*)(DEBUG)\s*(\[.*?\]\s*\(.*?\)\s*\(.*?\))\s*(.*)$</string>
+			<key>name</key>
+			<string>string.quoted.log4jview</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>control.log4jview</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.trace.log4jview</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.trace.message.log4jview</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>entity.trace.lg4jview</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>trace jboss</string>
+			<key>match</key>
+			<string>^(.*)(TRACE)\s*(\[.*?\]\s*\(.*?\)\s*\(.*?\))\s*(.*)$</string>
 			<key>name</key>
 			<string>string.quoted.log4jview</string>
 		</dict>
@@ -281,3 +369,4 @@
 	<string>59d2eab0-506c-4c33-8e2f-a6a74820383b</string>
 </dict>
 </plist>
+

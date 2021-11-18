@@ -1,5 +1,5 @@
-# Log4jView
-Sublime syntax highlighter for Log4j log files
+# CloudStackLog4jView
+Sublime syntax highlighter for CloudStack log files
 
 Will be automatically applied to .log files.
 
